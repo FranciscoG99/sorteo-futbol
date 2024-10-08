@@ -80,6 +80,28 @@ function actualizarListaJugadores() {
     });
 }
 
+// Agregar jugador con botón y tecla Enter
+document.getElementById('jugador').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        agregarJugador();
+    }
+});
+
+document.getElementById('agregarJugador').addEventListener('click', function () {
+    agregarJugador();
+});
+
+function agregarJugador() {
+    const nombreJugador = document.getElementById('jugador').value.trim();
+    if (nombreJugador) {
+        listaJugadores.push(nombreJugador);
+        actualizarListaJugadores();
+        document.getElementById('jugador').value = '';
+        document.getElementById('jugador').focus(); // Volver a enfocar el input
+    }
+}
+
+
 // Eliminar jugador de la lista
 function eliminarJugador(index) {
     listaJugadores.splice(index, 1); // Eliminar el jugador de la lista
