@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Equipos de Fútbol</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/app.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gestor de Equipos de Fútbol</h1>
+        <div class="linea"></div>
+        <h2>Selecciona el tipo de partido:</h2>
+        <div id="tipoPartido">
+            <button class="btn-partido" data-tipo="5">F5</button>
+            <button class="btn-partido" data-tipo="7">F7</button>
+            <button class="btn-partido" data-tipo="11">F11</button>
+        </div>
+
+        <!-- Formulario para ingresar los jugadores -->
+        <section class="nombreJugadores">
+            <h2>Ingresa los nombres de los jugadores</h2>
+            <div id="formularioJugadores">
+                <input type="text" id="jugador" placeholder="Nombre del jugador">
+                
+                <button id="agregarJugador">Agregar Jugador</button>
+            </div>
+
+            <!-- Lista de jugadores -->
+            <ul id="listaJugadores"></ul>
+
+            <!-- Botón para sortear equipos -->
+            <button id="sortearEquipos" class="btn-sorteo">Sortear Equipos</button>
+        </section>
+
+        <!-- Mostrar los equipos generados -->
+        <h2>Equipos</h2>
+        <div id="equipos">
+            <div id="equipo1">
+                <h3>Equipo 1</h3>
+                <ul id="listaEquipo1"></ul>
+            </div>
+            <div id="equipo2">
+                <h3>Equipo 2</h3>
+                <ul id="listaEquipo2"></ul>
+            </div>
+        </div>
+
+        <!-- Quién inicia el partido -->
+        <h2>Inicia el partido:</h2>
+        <p id="inicia"></p>
+
+    </div>
+
+</body>
+</html>

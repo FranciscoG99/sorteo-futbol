@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: green;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ddda3d;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    color: #003603;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #003603;
+    margin-bottom: 10px;
+}
+
+.linea {
+    background-color: #003603;
+    margin: auto;
+    width: 40%;
+    height: 4px;
+    border-radius: 5px;
+}
+
+#tipoPartido {
+    text-align: center;
+}
+
+.btn-partido {
+    background-color: #f0f0f0;
+    border: 2px solid #004203;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-weight: 800;
+}
+
+.btn-partido:hover {
+    background-color: #4CAF50;
+}
+
+.btn-partido.selected {
+    background-color: #02a30a;
+    border: 2px solid #016f07;
+    color: white;
+}
+
+#listaJugadores {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#jugador {
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid #016f07;
+}
+
+#agregarJugador {
+    background-color: #02a30a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#agregarJugador:active {
+    transform: translateY(1px);
+}
+
+/* Estilos para los divs de los jugadores */
+.jugador {
+    display: flex;
+    background-color: #243890;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    /* position: relative; */
+}
+
+.jugador span {
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón de eliminar (la cruz "X") */
+.jugador .eliminar {
+    background-color: #ff2c2c;
+    color: white;
+    border: none;
+    /* padding: 5px; */
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1;
+    /* position: absolute; */
+    /* right: 5px; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+}
+
+.jugador .eliminar:hover {
+    background-color: #c02020;
+    color: white;
+}
+
+.btn-sorteo {
+    color: white;
+    background-color: #02a30a;
+    border: 2px solid #016f07;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.btn-sorteo:active {
+    transform: translateY(3px);
+}
+
+#equipos {
+    background-image: url(https://c.wallhere.com/photos/f1/03/1920x1080_px_grass_Soccer_Pitches-719779.jpg!d);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+#inicia {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #003603;
+}
+
+.nombreJugadores {
+    display: grid;
+    place-items: center;
+}
