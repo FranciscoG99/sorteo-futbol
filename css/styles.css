@@ -144,19 +144,35 @@ h2 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     display: flex;
     justify-content: space-around;
     height: auto;
     margin-top: 10px;
-    color: white;
+    color: #fdec00;
     text-transform: uppercase;
     text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1)
 }
 
 ul {
     list-style-type: none;
     font-size: 16px;
     padding: 0;
+}
+
+#copiarContenido {
+    position: absolute;
+    bottom: 5px;
+    right: auto;
+    color: white;
+    background-color: #6f6f6f;
+    border: 2px solid #484848;
+    cursor: pointer;
+}
+
+#copiarContenido:hover {
+    background-color: #484848;
 }
 
 #inicia {

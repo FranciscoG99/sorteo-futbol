@@ -137,6 +137,50 @@ function mostrarEquipos(equipo1, equipo2) {
     });
 }
 
+const botonCopiar = document.getElementById('copiarContenido');
+
+// Función para mostrar los equipos y el botón de copiar
+function mostrarEquipos(equipo1, equipo2) {
+    const listaEquipo1 = document.getElementById('listaEquipo1');
+    const listaEquipo2 = document.getElementById('listaEquipo2');
+
+    listaEquipo1.innerHTML = '';
+    listaEquipo2.innerHTML = '';
+
+    equipo1.forEach(jugador => {
+        const li = document.createElement('li');
+        li.textContent = jugador;
+        listaEquipo1.appendChild(li);
+    });
+
+    equipo2.forEach(jugador => {
+        const li = document.createElement('li');
+        li.textContent = jugador;
+        listaEquipo2.appendChild(li);
+    });
+
+    // Mostrar el botón de copiar después de que los equipos se muestren
+    botonCopiar.style.display = 'inline-block';
+}
+
+// Función para copiar el contenido de los equipos
+botonCopiar.addEventListener('click', function () {
+    const equipo1 = document.getElementById('listaEquipo1').innerText;
+    const equipo2 = document.getElementById('listaEquipo2').innerText;
+    const textoAIniciar = document.getElementById('inicia').innerText;
+
+    const textoCompleto = `Equipo 1:\n${equipo1}\n\nEquipo 2:\n${equipo2}\n\n${textoAIniciar}`;
+
+    // Copiar el contenido al portapapeles
+    navigator.clipboard.writeText(textoCompleto)
+        .then(() => {
+            alert('Equipos copiados al portapapeles');
+        })
+        .catch(err => {
+            console.error('Error al copiar', err);
+        });
+});
+
 function definirInicioPartido() {
     const equipoInicial = Math.random() < 0.5 ? 'Equipo 1' : 'Equipo 2';
     document.getElementById('inicia').textContent = `El ${equipoInicial} inicia el partido.`;
