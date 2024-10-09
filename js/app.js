@@ -163,8 +163,34 @@ function mostrarEquipos(equipo1, equipo2) {
     botonCopiar.style.display = 'inline-block';
 }
 
+const botonParaCopiar = document.getElementById('copiarContenido');
+
+// Función para mostrar los equipos y el botón de copiar
+function mostrarEquipos(equipo1, equipo2) {
+    const listaEquipo1 = document.getElementById('listaEquipo1');
+    const listaEquipo2 = document.getElementById('listaEquipo2');
+
+    listaEquipo1.innerHTML = '';
+    listaEquipo2.innerHTML = '';
+
+    equipo1.forEach(jugador => {
+        const li = document.createElement('li');
+        li.textContent = jugador;
+        listaEquipo1.appendChild(li);
+    });
+
+    equipo2.forEach(jugador => {
+        const li = document.createElement('li');
+        li.textContent = jugador;
+        listaEquipo2.appendChild(li);
+    });
+
+    // Mostrar el botón de copiar después de que los equipos se muestren
+    botonParaCopiar.style.display = 'inline-block';
+}
+
 // Función para copiar el contenido de los equipos
-botonCopiar.addEventListener('click', function () {
+botonParaCopiar.addEventListener('click', function () {
     const equipo1 = document.getElementById('listaEquipo1').innerText;
     const equipo2 = document.getElementById('listaEquipo2').innerText;
     const textoAIniciar = document.getElementById('inicia').innerText;
@@ -174,7 +200,13 @@ botonCopiar.addEventListener('click', function () {
     // Copiar el contenido al portapapeles
     navigator.clipboard.writeText(textoCompleto)
         .then(() => {
-            alert('Equipos copiados al portapapeles');
+            // Cambiar el texto del botón a "Copiado"
+            botonParaCopiar.textContent = '¡Copiado!';
+
+            // Esperar 2 segundos y volver a cambiar el texto al original
+            setTimeout(() => {
+                botonParaCopiar.textContent = 'Copiar';
+            }, 3000);
         })
         .catch(err => {
             console.error('Error al copiar', err);
