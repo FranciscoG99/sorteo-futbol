@@ -203,7 +203,7 @@ botonParaCopiar.addEventListener('click', function () {
             // Cambiar el texto del botón a "Copiado"
             botonParaCopiar.textContent = '¡Copiado!';
 
-            // Esperar 2 segundos y volver a cambiar el texto al original
+            // Esperar 3 segundos y volver a cambiar el texto al original
             setTimeout(() => {
                 botonParaCopiar.textContent = 'Copiar';
             }, 3000);

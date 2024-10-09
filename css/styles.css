@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #ddda3d;
     box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
 }
@@ -169,7 +169,7 @@ ul {
 
 #copiarContenido {
     position: absolute;
-    bottom: 5px;
+    bottom: 2px;
     right: auto;
     color: white;
     background-color: #6f6f6f;
